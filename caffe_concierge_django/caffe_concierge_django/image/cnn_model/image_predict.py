@@ -21,7 +21,7 @@ def byte_to_tensor(image_data):
 
     byte_data = image_data.read()
     img = Image.open(BytesIO(byte_data))
-    print(img.size)
+
     # convert PIL.Image.Image type to 3D tensor with shape (224, 224, 3)
     x = np.expand_dims(image.img_to_array(img.resize((224, 224))), 0)
     # convert 3D tensor to 4D tensor with shape (1, 224, 224, 3) and return 4D tensor

@@ -9,5 +9,7 @@ class ImageSerializer(serializers.ModelSerializer):
         fields = (
             'name',
             'caption',
-            'file'
+            'file',
+            'lat',
+            'lng'
         )

@@ -8,6 +8,10 @@ class Image(models.Model):
     
     name = models.CharField(max_length=50)
     caption = models.TextField()
+
+    lat = models.CharField(max_length=30, null=True)
+    lng = models.CharField(max_length=30, null=True)
+
     file = models.ImageField()
 
     def __str__(self):

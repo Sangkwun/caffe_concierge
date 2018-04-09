@@ -18,7 +18,6 @@ import json
 class ImagePredict(APIView):
     def post(self, request, format=None):
  
-        print(request.data)
         image = request.FILES["image"]
 
         result = image_to_caffe(image)
